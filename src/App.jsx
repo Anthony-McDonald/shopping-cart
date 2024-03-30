@@ -9,19 +9,34 @@ function App() {
 
   return (
     <>
-    <h1>Our First Test</h1>
+    <div className="header">
+    <Link to="/">
 
-    <div>
-      <h1>Hello from the main page of the app!</h1>
-      <p>Here are some examples of links to other pages</p>
-      <nav>
-        <ul>
-          <li>
-            <Link to="profile">Profile page</Link>
-          </li>
-        </ul>
-      </nav>
+    <div className="top-left">
+      <img className="white logo" src="/src/assets/svgs/logo.svg" alt="logo" />
+      <div className="title-text">
+      <h3 className='website-name'>Pixel Perfect</h3>
+      <h5 className="slogan">B o r n To P l a y</h5>
+      </div>
+      </div>
+      
+    </Link>
+
+      <div className="search-div"></div>
+
+      <Link to="./games">
+      <div className="shopping-cart">
+        <div className="shop-wrapper">
+        <img className="white cart-img" src="/src/assets/svgs/cart.svg" alt="cart" />
+        </div>
+
+      </div>
+        
+        </Link> 
+
     </div>
+    <h1>Our First Test</h1>
+    
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

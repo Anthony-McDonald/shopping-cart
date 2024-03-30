@@ -3,9 +3,9 @@ import {Link} from "react-router-dom"
 const DefaultProfile = () => {
     return (
 <>
-<Link to="./spinach">Spinach</Link> 
+{/* <Link to="./spinach">Spinach</Link>  */}
 -
-<Link to="./popeye">Popeye</Link>
+{/* <Link to="./popeye">Popeye</Link> */}
 </>
 
     )
