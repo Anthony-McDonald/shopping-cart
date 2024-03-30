@@ -59,62 +59,7 @@ html, body {
   width: 100%;
 }
 
-.header {
-  background: rgba(0,0,0,0.5);
-  height: 8rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-}
 
-.top-left {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  transition: 0.3s;
-  color: white;
-}
-
-.logo {
-  width: 60px;
-  height: auto;
-  margin: 1rem;
-}
-
-.white {
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(349deg) brightness(100%) contrast(101%);
-}
-
-.cart-img {
-  width: 40px;
-  margin-right: 1rem;
-  transition: 0.3s;
-}
-
-.top-left:hover {
-  transform: scale(1.05);
-}
-
-.cart-img:hover {
-  width: 45px;
-}
-
-.title-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.website-name {
-  font-weight: bolder;
-  font-size: 2rem;
-  margin: 0;
-}
-
-.slogan {
-  margin: 0;
-}
 
 .main-holder {
   display: flex;
