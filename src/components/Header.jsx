@@ -4,7 +4,7 @@ import '../css/Header.css'
 
 export default function Header() {
     return (
-        <div className="header">
+        <div className="header" id="header-id">
         <Link to="/">
     
         <div className="top-left">
@@ -17,10 +17,11 @@ export default function Header() {
           
         </Link>
 
-        <SearchElement />
+        <div className="search-div">
+            {/* <h1>testeeer</h1> */}
+        <SearchElement className="search-box"/>
+        </div>
 
-    
-          <div className="search-div"></div>
     
           <Link to="./games">
           <div className="shopping-cart">
