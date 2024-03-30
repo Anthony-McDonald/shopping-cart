@@ -1,1 +1,1 @@
-# My personal little handy dandy react template
+# Shopping Cart made as part of the odin project
