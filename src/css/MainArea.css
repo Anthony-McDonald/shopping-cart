@@ -1,0 +1,60 @@
+@media only screen and (max-width: 1000px) {
+    .hype-text {
+        font-size: 4.5rem !important;
+    }
+
+    .open-text {
+        font-size: 7rem !important;
+        border: 1rem solid white !important;
+        margin-top: 2rem !important;
+    }
+}
+
+.main-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100;
+    flex-direction: column;
+}
+
+.hype-text {
+font-size: 8rem;
+text-align: center;
+margin: 1rem;
+color: white;
+opacity: 0.8;
+}
+
+.pixelify-sans {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <700>;
+    font-style: normal;
+}
+
+.controller-svg {
+width: 20%;
+}
+
+.open-text {
+    margin-top: 4rem;
+    font-size: 10rem;
+    border: 2rem solid white;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    opacity: 0.8;
+    user-select: none;
+    -webkit-user-select: none;
+    color: white;
+}
+
+.open {
+    transition: 0.3s;
+    width: auto;
+}
+
+.open:hover {
+    transform:scale(1.2);
+}

@@ -3,6 +3,7 @@
 // import viteLogo from '/vite.svg'
 import './css/App.css'
 import Header from './components/Header'
+import MainArea from './components/MainArea'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -10,7 +11,8 @@ function App() {
   return (
     <>
     <Header />
-    <h1>Our First Test</h1>
+    <MainArea />
+
     
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
