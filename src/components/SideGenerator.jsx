@@ -29,11 +29,9 @@ export default function SideGenerator({title, buttonEffect}) {
 
 
     return (
-        <div className="side-gen">
-                        <div className="hamburger-holder">
-            <img className="hamburger white"src="src/assets/svgs/hamburger.svg" alt="burger-menu" onClick={buttonEffect} />
-            </div>
-            <h1 className="gen-title">{title}</h1>
+        <div className="gen-layout">
+                <h1 className="gen-title">{title}</h1>
+                <div className="side-gen">
 
                 {entries && entries.length > 0 && (
                 entries.map((entry, index) => (
@@ -46,8 +44,13 @@ export default function SideGenerator({title, buttonEffect}) {
             <div className="hamburger-holder">
             <img className="hamburger white"src="src/assets/svgs/hamburger.svg" alt="burger-menu" onClick={buttonEffect} />
             </div>
+            
 
         </div>
+
+        </div>
+
+
 
         
     )

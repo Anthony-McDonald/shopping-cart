@@ -1,3 +1,30 @@
+
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 745px) {
+    .side-gen {
+        display: grid;
+        grid-template-columns:50% 50%;
+    }
+  }
+  
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .side-gen {
+        display: grid;
+        grid-template-columns:33% 33% 33%;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    .side-gen {
+        display: grid;
+        grid-template-columns:25% 25% 25% 25%;
+    }
+  }
+  
+
 .hamburger-holder{
     display: flex;
     justify-content: end;
@@ -14,6 +41,8 @@
 .side-gen {
     width: 100%;
     overflow: scroll;
+    padding-bottom: 8rem;
+    margin-bottom: 2rem;
 }
 
 .gen-title {
@@ -21,3 +50,8 @@
     text-shadow: 1px 0 0 #676060, 0 -1px 0 #676060, 0 1px 0 #676060, -1px 0 0 #676060;
     margin-left: 1rem;
 }
+
+.gen-layout {
+    overflow: scroll;
+}
+

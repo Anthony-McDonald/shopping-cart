@@ -5,3 +5,48 @@
     border-radius: 1rem;
     margin: 1rem;
 }
+
+.platform-img {
+    width: 20px;
+    margin: 1rem;
+}
+
+.compatible-platforms {
+    display: flex;
+}
+
+.generated-img {
+    aspect-ratio: 1.7 / 1;
+    object-fit: cover;
+    width: 100%;
+    background-position: center center;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px
+}
+
+.game-name {
+    margin: 0;
+    margin-left: 1rem;
+}
+
+.shop-functionality {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.shop-button, .shop-price {
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+.shop-button {
+    margin-left: 1rem;
+}
+
+.shop-price {
+    font-size: 1rem;
+}

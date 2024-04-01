@@ -10,8 +10,14 @@ export default function GeneratedEntry({ entryInfo, index }) {
 
     return (
         <div className="entry-div">
-            <img key={index} src={art} alt={`Background ${index}`} />
-            <div className="shop-functionality"></div>
+            <div className="img-container">
+            <img className='generated-img' key={index} src={art} alt={`Background ${index}`} />
+            </div>
+            <h3 className="game-name">{gameName}</h3>
+            <div className="shop-functionality">
+                <button className='shop-button'>Add to basket</button>
+                <h3 className='shop-price'>{price}</h3>
+            </div>
             <div className="compatible-platforms">
             {platforms && platforms.length > 0 && (
                 platforms.map((platform, index) => (
@@ -20,7 +26,6 @@ export default function GeneratedEntry({ entryInfo, index }) {
                 ))
             )}
             </div>
-            <h3 className="game-name">{gameName}</h3>
         </div>
     )
 }
