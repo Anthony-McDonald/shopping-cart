@@ -1,0 +1,23 @@
+.hamburger-holder{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+.hamburger {
+    width: 50px;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    
+}
+
+.side-gen {
+    width: 100%;
+    overflow: scroll;
+}
+
+.gen-title {
+    text-align: start;
+    text-shadow: 1px 0 0 #676060, 0 -1px 0 #676060, 0 1px 0 #676060, -1px 0 0 #676060;
+    margin-left: 1rem;
+}

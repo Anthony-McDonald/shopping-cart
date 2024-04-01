@@ -1,0 +1,9 @@
+.main-games-layout {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+    height: 100%;
+}
+
+
+
