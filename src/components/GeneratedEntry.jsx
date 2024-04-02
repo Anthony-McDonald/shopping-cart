@@ -11,7 +11,7 @@ export default function GeneratedEntry({ entryInfo, index, addToBasket }) {
     return (
         <div className="entry-div">
             <div className="img-container">
-            <img className='generated-img' key={index} src={art} alt={`Background art ${index}`} />
+            <img loading='lazy' className='generated-img' key={index} src={art} alt={`Background art ${index}`} />
             </div>
             <h3 className="game-name">{gameName}</h3>
             <div className="shop-functionality">
