@@ -56,7 +56,7 @@ const Games = () => {
                 <Header showCart={true}/>
                 <ShoppingSidebar sidebarVisible={sidebarVisible} basketArray={basket} removeFromBasket={removeItem} /> 
                 <ShowMore clickHandler={clickHandler} />
-                <img className="hamburger white" src="src/assets/svgs/hamburger.svg" alt="burger-menu" onClick={buttonEffect} />
+                <img className="hamburger white" src="public/assets/svgs/hamburger.svg" alt="burger-menu" onClick={buttonEffect} />
             </>
         );
     } else {

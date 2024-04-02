@@ -2,7 +2,7 @@ import "../css/GamesSidebar.css"
 
 export default function SidebarEntry({ sideText, srcDifferentiator, clickHandler }) {
 
-    const src = "src/assets/svgs/" + srcDifferentiator + ".svg";
+    const src = "public/assets/svgs/" + srcDifferentiator + ".svg";
     return (
         <div onClick={() => clickHandler(sideText
         )} className="sidebar-entry">

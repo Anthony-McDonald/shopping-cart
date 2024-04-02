@@ -1,11 +1,11 @@
 export default function Platform({ platform }) {
     const srcDictionary = {
-        pc: '/src/assets/svgs/platforms/windows.svg',
-        playstation: '/src/assets/svgs/platforms/playstation.svg',
-        xbox: '/src/assets/svgs/platforms/xbox.svg',
-        switch: '/src/assets/svgs/platforms/switch.svg',
-        ios: '/src/assets/svgs/platforms/ios.svg',
-        android: '/src/assets/svgs/platforms/android.svg',
+        pc: '/public/assets/svgs/platforms/windows.svg',
+        playstation: '/public/assets/svgs/platforms/playstation.svg',
+        xbox: '/public/assets/svgs/platforms/xbox.svg',
+        switch: '/public/assets/svgs/platforms/switch.svg',
+        ios: '/public/assets/svgs/platforms/ios.svg',
+        android: '/public/assets/svgs/platforms/android.svg',
     }
     // console.log(platform.platform.name);
 
