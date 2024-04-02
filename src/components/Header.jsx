@@ -15,7 +15,7 @@ export default function Header({ showCart }) {
         <Link to="/">
     
         <div className="top-left">
-          <img className="white logo" src="/public/assets/svgs/logo.svg" alt="logo" />
+          <img className="white logo" src="/assets/svgs/logo.svg" alt="logo" />
           <div className="title-text">
           <h3 className='website-name'>Pixel Perfect</h3>
           <h5 className="slogan">Born To Play</h5>
@@ -33,7 +33,7 @@ export default function Header({ showCart }) {
         {showCart && 
                   <div className="shopping-cart">
                   <div className="shop-wrapper">
-                  <img onClick={shopEffect} className="white cart-img" src="/public/assets/svgs/cart.svg" alt="cart" />
+                  <img onClick={shopEffect} className="white cart-img" src="/assets/svgs/cart.svg" alt="cart" />
                   </div>
                 </div>
         }
