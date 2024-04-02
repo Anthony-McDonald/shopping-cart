@@ -12,7 +12,20 @@ const Games = () => {
     const [sideTitle, setSideTitle] = useState("Home");
     const [filterCriteria, setFilterCriteria] = useState([]);
     const { sidebarVisible, toggleSidebar } = useSidebar();
+    const [basket, setBasket] = useState([]);
     const ref = useRef(null);
+
+    const addItem = (item) => {
+        setBasket([...basket, item]);
+        console.log(basket);
+    };
+
+    const removeItem = (index) => {
+        console.log("index passed through is: " + index)
+        const updatedBasket = [...basket];
+        updatedBasket.splice(index, 1);
+        setBasket(updatedBasket);
+    };
 
     const handleClickOutside = (event) => {
         if (ref.current && !ref.current.contains(event.target) && sidebarVisible) {
@@ -36,8 +49,8 @@ const Games = () => {
     if (showMoreClicked) {
         return (
             <>
-                <Header />
-                {sidebarVisible && <ShoppingSidebar />}
+                <Header showCart={true}/>
+                <ShoppingSidebar sidebarVisible={sidebarVisible} basketArray={basket} removeFromBasket={removeItem} /> 
                 <ShowMore />
                 <img className="hamburger white" src="src/assets/svgs/hamburger.svg" alt="burger-menu" onClick={buttonEffect} />
             </>
@@ -45,11 +58,11 @@ const Games = () => {
     } else {
         return (
             <>
-                <Header />
-                {sidebarVisible && <ShoppingSidebar />}
+                <Header showCart={true}/>
+                <ShoppingSidebar sidebarVisible={sidebarVisible} basketArray={basket} removeFromBasket={removeItem} />
                 <div className="main-games-layout">
                     <GamesSidebar />
-                    <SideGenerator onClick={handleClickOutside}  title={sideTitle} filterCriteria={filterCriteria} buttonEffect={buttonEffect} />
+                    <SideGenerator onClick={handleClickOutside}  title={sideTitle} filterCriteria={filterCriteria} buttonEffect={buttonEffect} addToBasket={addItem} />
                 </div>
             </>
         );

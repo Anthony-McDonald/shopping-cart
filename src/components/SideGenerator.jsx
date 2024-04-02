@@ -4,7 +4,7 @@ import React from "react";
 import useApiData from "./useApi";
 import GeneratedEntry from "./GeneratedEntry";
 
-export default function SideGenerator({title, buttonEffect}) {
+export default function SideGenerator({title, buttonEffect, addToBasket}) {
     const data = useApiData('https://rawg.io/api/games?token&key=51e34b4a709042cea1f24c2bac77db00')
     const [entries, setEntries] = useState(null);
     if (data != null) {
@@ -35,7 +35,7 @@ export default function SideGenerator({title, buttonEffect}) {
 
                 {entries && entries.length > 0 && (
                 entries.map((entry, index) => (
-                    <GeneratedEntry entryInfo={entry} index={index}></GeneratedEntry>
+                    <GeneratedEntry entryInfo={entry} index={index} addToBasket={addToBasket}></GeneratedEntry>
                 ))
             )}
 
