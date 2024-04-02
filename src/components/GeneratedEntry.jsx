@@ -11,7 +11,7 @@ export default function GeneratedEntry({ entryInfo, index, addToBasket }) {
     return (
         <div className="entry-div">
             <div className="img-container">
-            <img className='generated-img' key={index} src={art} alt={`Background ${index}`} />
+            <img className='generated-img' key={index} src={art} alt={`Background art ${index}`} />
             </div>
             <h3 className="game-name">{gameName}</h3>
             <div className="shop-functionality">
@@ -19,7 +19,9 @@ export default function GeneratedEntry({ entryInfo, index, addToBasket }) {
                     {
                         name: gameName,
                         imageSrc: art,
-                        price: price
+                        price: price,
+                        platforms: platforms
+                        
                     }
                 )} className='shop-button'>Add to basket</button>
                 <h3 className='shop-price'>£{price}</h3>
@@ -28,7 +30,7 @@ export default function GeneratedEntry({ entryInfo, index, addToBasket }) {
             {platforms && platforms.length > 0 && (
                 platforms.map((platform, index) => (
                     // <GeneratedEntry entryInfo={entry} index={index}></GeneratedEntry>
-                    <Platform platform={platform} />
+                    <Platform key={index} platform={platform} />
                 ))
             )}
             </div>

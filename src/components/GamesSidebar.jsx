@@ -1,11 +1,11 @@
 import SidebarElements from "./SidebarElements";
 
 
-export default function GamesSidebar() {
+export default function GamesSidebar({ clickHandler }) {
     return (
         <div id="sidebar">
 
-        <SidebarElements />
+        <SidebarElements clickHandler={clickHandler} />
 
         </div>
 

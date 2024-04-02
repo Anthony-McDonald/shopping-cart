@@ -1,10 +1,11 @@
 import "../css/GamesSidebar.css"
 
-export default function SidebarEntry({ sideText, srcDifferentiator }) {
+export default function SidebarEntry({ sideText, srcDifferentiator, clickHandler }) {
 
     const src = "src/assets/svgs/" + srcDifferentiator + ".svg";
     return (
-        <div className="sidebar-entry">
+        <div onClick={() => clickHandler(sideText
+        )} className="sidebar-entry">
 
         <div className="sidebar-img-container">
             <img className="sidebar-img" src={src} alt="sidebar-img" />

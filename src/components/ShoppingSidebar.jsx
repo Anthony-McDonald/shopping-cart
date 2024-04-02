@@ -23,7 +23,7 @@ export default function ShoppingSidebar({ sidebarVisible, basketArray, removeFro
       <h1>Shopping Cart</h1>
       <div className="price-and-buy">
       <h5>Total price: £{totalPrice}</h5>
-      <button onClick={purchaseButton} className="purchase-button">Purchase Items</button>
+      <button onClick={purchaseButton} className="purchase-button">Purchase</button>
       </div>
 
       <div className="basket-entry">

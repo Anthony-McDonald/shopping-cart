@@ -2,10 +2,10 @@ import "../css/ShowMore.css"
 
 import SidebarElements from "./SidebarElements"
 
-export default function ShowMore() {
+export default function ShowMore({ clickHandler }) {
     return (
         <div className="showmore-container">
-            <SidebarElements />
+            <SidebarElements clickHandler={clickHandler}/>
         </div>
     )
 }

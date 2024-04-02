@@ -12,13 +12,13 @@ export default function Platform({ platform }) {
     switch (platform.platform.name) {
         case 'PC':
             return(<img className="white platform-img" src={srcDictionary.pc} alt={"pc"}></img>)
-        case 'Playstation':
+        case 'PlayStation':
             return(<img className="white platform-img" src={srcDictionary.playstation} alt={"playstation"}></img>)
         case 'Xbox':
             return(<img className="white platform-img" src={srcDictionary.xbox} alt={"xbox"}></img>)
         case 'Nintendo':
             return(<img className="white platform-img" src={srcDictionary.switch} alt={"switch"}></img>)
-        case 'Ios':
+        case 'iOS':
             return(<img className="white platform-img" src={srcDictionary.ios} alt={"ios"}></img>)
         case 'Android':
             return(<img className="white platform-img" src={srcDictionary.android} alt="android"></img>)

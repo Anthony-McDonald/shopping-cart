@@ -10,18 +10,17 @@ import ShoppingSidebar from "./ShoppingSidebar";
 const Games = () => {
     const [showMoreClicked, setShowMoreClicked] = useState(false);
     const [sideTitle, setSideTitle] = useState("Home");
-    const [filterCriteria, setFilterCriteria] = useState([]);
+    const [filterCriteria, setFilterCriteria] = useState("");
     const { sidebarVisible, toggleSidebar } = useSidebar();
     const [basket, setBasket] = useState([]);
     const ref = useRef(null);
 
     const addItem = (item) => {
+        console.log(item);
         setBasket([...basket, item]);
-        console.log(basket);
     };
 
     const removeItem = (index) => {
-        console.log("index passed through is: " + index)
         const updatedBasket = [...basket];
         updatedBasket.splice(index, 1);
         setBasket(updatedBasket);
@@ -32,6 +31,11 @@ const Games = () => {
             toggleSidebar();
         }
     };
+
+    const clickHandler = (elementClicked) => {
+        console.log("sidebar element clicked " + elementClicked);
+        setFilterCriteria(elementClicked);
+    }
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -51,7 +55,7 @@ const Games = () => {
             <>
                 <Header showCart={true}/>
                 <ShoppingSidebar sidebarVisible={sidebarVisible} basketArray={basket} removeFromBasket={removeItem} /> 
-                <ShowMore />
+                <ShowMore clickHandler={clickHandler} />
                 <img className="hamburger white" src="src/assets/svgs/hamburger.svg" alt="burger-menu" onClick={buttonEffect} />
             </>
         );
@@ -61,7 +65,7 @@ const Games = () => {
                 <Header showCart={true}/>
                 <ShoppingSidebar sidebarVisible={sidebarVisible} basketArray={basket} removeFromBasket={removeItem} />
                 <div className="main-games-layout">
-                    <GamesSidebar />
+                    <GamesSidebar clickHandler={clickHandler}/>
                     <SideGenerator onClick={handleClickOutside}  title={sideTitle} filterCriteria={filterCriteria} buttonEffect={buttonEffect} addToBasket={addItem} />
                 </div>
             </>
