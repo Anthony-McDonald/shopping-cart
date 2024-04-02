@@ -18,7 +18,17 @@
     transform: translateX(0);
 }
 
-.basket-entry {
+.price-and-buy {
+    display: flex;
+    justify-content: space-between;
+    margin-right:1rem ;
+    font-size: 1rem;
+    align-items: center;
+}
 
+.purchase-button {
+    height: 3rem;
+    margin-left: 1rem;
+    font-size: 0.8rem;
 }
 
