@@ -1,0 +1,11 @@
+.showmore-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+

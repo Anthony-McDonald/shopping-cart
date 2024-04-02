@@ -1,8 +1,18 @@
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (max-width: 740px) {
+      #sidebar {
+        display: none;
+      }
+      .hamburger-holder {
+        display: flex;
+      }
+    }
+
 .main-games-layout {
     display: flex;
     flex-direction: row;
     height: 100%;
 }
-
 
 

@@ -21,9 +21,9 @@ export default function SideGenerator({title, buttonEffect}) {
             }
         }
     }
-    if (entries != null) {
-        console.log(entries);
-    }
+    // if (entries != null) {
+    //     console.log(entries);
+    // }
 
 
 

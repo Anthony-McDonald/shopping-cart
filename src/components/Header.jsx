@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom"
 import SearchElement from "./SearchElement"
+import { useSidebar } from "./SidebarContext"
 import '../css/Header.css'
 
 export default function Header() {
+  const { toggleSidebar } = useSidebar();
+
+  function shopEffect() {
+    console.log("shop clicked")
+    toggleSidebar();
+  }
     return (
         <div className="header" id="header-id">
         <Link to="/">
@@ -23,15 +30,13 @@ export default function Header() {
         </div>
 
     
-          <Link to="./games">
           <div className="shopping-cart">
             <div className="shop-wrapper">
-            <img className="white cart-img" src="/src/assets/svgs/cart.svg" alt="cart" />
+            <img onClick={shopEffect} className="white cart-img" src="/src/assets/svgs/cart.svg" alt="cart" />
             </div>
     
           </div>
             
-            </Link> 
     
         </div>
     )

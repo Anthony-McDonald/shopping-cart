@@ -7,7 +7,7 @@ export default function Platform({ platform }) {
         ios: '/src/assets/svgs/platforms/ios.svg',
         android: '/src/assets/svgs/platforms/android.svg',
     }
-    console.log(platform.platform.name);
+    // console.log(platform.platform.name);
 
     switch (platform.platform.name) {
         case 'PC':
