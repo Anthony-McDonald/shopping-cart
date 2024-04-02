@@ -3,7 +3,7 @@ import SearchElement from "./SearchElement"
 import { useSidebar } from "./SidebarContext"
 import '../css/Header.css'
 
-export default function Header({ showCart }) {
+export default function Header({ showCart, setSearchInput }) {
   const { toggleSidebar } = useSidebar();
 
   function shopEffect() {
@@ -26,7 +26,7 @@ export default function Header({ showCart }) {
 
         <div className="search-div">
             {/* <h1>testeeer</h1> */}
-        <SearchElement className="search-box"/>
+        <SearchElement className="search-box" setSearchInput={setSearchInput}/>
         </div>
 
     
@@ -43,3 +43,4 @@ export default function Header({ showCart }) {
         </div>
     )
 }
+

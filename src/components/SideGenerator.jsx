@@ -4,7 +4,7 @@ import React from "react";
 import useApiData from "./useApi";
 import GeneratedEntry from "./GeneratedEntry";
 
-export default function SideGenerator({title, buttonEffect, addToBasket, filterCriteria}) {
+export default function SideGenerator({title, buttonEffect, addToBasket, filterCriteria, searchInput}) {
     const [baseApiURL, setBaseApiURL] = useState('https://rawg.io/api/games?token&key=51e34b4a709042cea1f24c2bac77db00&page_size=40');
     const [alterableApiURL, setAlterableApiURL] = useState(baseApiURL);
 
@@ -110,15 +110,30 @@ export default function SideGenerator({title, buttonEffect, addToBasket, filterC
             default:
                 break;
         }
-        currentApiURL + "&page_size=30"
+        currentApiURL + "&page_size=40"
         setAlterableApiURL(currentApiURL);
     }, [filterCriteria])
+
+    useEffect(() => {
+        console.log("search input change detected")
+        let currentApiURL = baseApiURL;
+        currentApiURL += formatSearch(searchInput);
+        currentApiURL += "&page_size=40"
+        currentApiURL += "&search=" + formatSearch(searchInput);
+        console.log("api to print from is: " + currentApiURL)
+        setAlterableApiURL(currentApiURL);
+    },[searchInput])
 
     function formatDate(date) {
         const year = date.getFullYear();
         const month = String(date.getMonth() + 1).padStart(2, '0');
         const day = String(date.getDate()).padStart(2, '0');
         return `${year}-${month}-${day}`;
+    }
+
+    function formatSearch(searchString) {
+        return searchString.replace(/\s+/g, '-');
+        
     }
 
 

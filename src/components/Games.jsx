@@ -9,10 +9,11 @@ import ShoppingSidebar from "./ShoppingSidebar";
 
 const Games = () => {
     const [showMoreClicked, setShowMoreClicked] = useState(false);
-    const [sideTitle, setSideTitle] = useState("Home");
+    const [sideTitle, setSideTitle] = useState("GOATs");
     const [filterCriteria, setFilterCriteria] = useState("");
-    const { sidebarVisible, toggleSidebar } = useSidebar();
     const [basket, setBasket] = useState([]);
+    const [searchInput, setSearchInput] = useState("");
+    const { sidebarVisible, toggleSidebar } = useSidebar();
     const ref = useRef(null);
 
     const addItem = (item) => {
@@ -32,8 +33,14 @@ const Games = () => {
         }
     };
 
+    const handleSearchInput = (value) => {
+        setSearchInput(value);
+        setSideTitle("Search Results")
+    };
+
     const clickHandler = (elementClicked) => {
         console.log("sidebar element clicked " + elementClicked);
+        setSideTitle(elementClicked);
         setFilterCriteria(elementClicked);
     }
 
@@ -53,7 +60,7 @@ const Games = () => {
     if (showMoreClicked) {
         return (
             <>
-                <Header showCart={true}/>
+                <Header showCart={true} setSearchInput={handleSearchInput}/>
                 <ShoppingSidebar sidebarVisible={sidebarVisible} basketArray={basket} removeFromBasket={removeItem} /> 
                 <ShowMore clickHandler={clickHandler} />
                 <img className="hamburger white" src="/assets/svgs/hamburger.svg" alt="burger-menu" onClick={buttonEffect} />
@@ -62,11 +69,11 @@ const Games = () => {
     } else {
         return (
             <>
-                <Header showCart={true}/>
+                <Header showCart={true} setSearchInput={handleSearchInput}/>
                 <ShoppingSidebar sidebarVisible={sidebarVisible} basketArray={basket} removeFromBasket={removeItem} />
                 <div className="main-games-layout">
                     <GamesSidebar clickHandler={clickHandler}/>
-                    <SideGenerator onClick={handleClickOutside}  title={sideTitle} filterCriteria={filterCriteria} buttonEffect={buttonEffect} addToBasket={addItem} />
+                    <SideGenerator onClick={handleClickOutside}  title={sideTitle} filterCriteria={filterCriteria} buttonEffect={buttonEffect} addToBasket={addItem} searchInput={searchInput} />
                 </div>
             </>
         );
