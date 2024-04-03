@@ -8,10 +8,9 @@ export default function SideGenerator({title, buttonEffect, addToBasket, filterC
     const pageSize = 32;
     const API_KEY = process.env.RAWG_API_KEY
     console.log(API_KEY);
+    const API_KEY_QUERIED = useApiData('https://api.netlify.com/api/v1/accounts/anthony-mcdonald/env/')
     console.log('Environment variables:');
-    Object.keys(process.env).forEach(key => {
-      console.log(`${key}: ${process.env[key]}`);
-    });
+    console.log(API_KEY_QUERIED);
     const baseApiURL = 'https://rawg.io/api/games?token&key=' + API_KEY + '&page_size=' + pageSize;
     const [alterableApiURL, setAlterableApiURL] = useState(baseApiURL);
 
