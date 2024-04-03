@@ -70,7 +70,7 @@ const Games = () => {
     } else {
         return (
             <>
-                <Header showCart={true} setSearchInput={handleSearchInput}/>
+                <Header showCart={true} setSearchInput={handleSearchInput} basketSize={basket.length}/>
                 <ShoppingSidebar sidebarVisible={sidebarVisible} basketArray={basket} removeFromBasket={removeItem} />
                 <div className="main-games-layout">
                     <GamesSidebar clickHandler={clickHandler}/>

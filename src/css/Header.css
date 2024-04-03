@@ -93,6 +93,7 @@
 
 .shopping-cart {
     flex-wrap: nowrap;
+    position: relative;
 }
 
 .search-div {
@@ -112,4 +113,18 @@
 
 textarea:focus, input:focus{
     outline: none;
+}
+
+.basket-size {
+  position: absolute;
+  top: 0rem;
+  left: 2rem;
+  height: 2rem;
+}
+
+.basket-size-wrapper {
+  background-color: rgb(144, 178, 236);
+  border-radius: 3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }

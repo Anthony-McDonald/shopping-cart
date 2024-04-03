@@ -3,7 +3,7 @@ import SearchElement from "./SearchElement"
 import { useSidebar } from "./SidebarContext"
 import '../css/Header.css'
 
-export default function Header({ showCart, setSearchInput }) {
+export default function Header({ showCart, setSearchInput, basketSize }) {
   const { toggleSidebar } = useSidebar();
 
   function shopEffect() {
@@ -34,6 +34,11 @@ export default function Header({ showCart, setSearchInput }) {
                   <div className="shopping-cart">
                   <div className="shop-wrapper">
                   <img onClick={shopEffect} className="white cart-img" src="/assets/svgs/cart.svg" alt="cart" />
+                  <div className="basket-size">
+                    <div className="basket-size-wrapper">
+                    {basketSize > 0 && <h5>{basketSize}</h5>}
+                    </div>
+                  </div>
                   </div>
                 </div>
         }
