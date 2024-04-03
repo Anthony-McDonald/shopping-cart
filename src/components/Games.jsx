@@ -42,6 +42,7 @@ const Games = () => {
         console.log("sidebar element clicked " + elementClicked);
         setSideTitle(elementClicked);
         setFilterCriteria(elementClicked);
+        setShowMoreClicked(false);
     }
 
     useEffect(() => {
