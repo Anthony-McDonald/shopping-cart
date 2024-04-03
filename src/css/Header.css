@@ -120,6 +120,11 @@ textarea:focus, input:focus{
   top: 0rem;
   left: 2rem;
   height: 2rem;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .basket-size-wrapper {

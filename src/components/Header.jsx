@@ -32,8 +32,8 @@ export default function Header({ showCart, setSearchInput, basketSize }) {
     
         {showCart && 
                   <div className="shopping-cart">
-                  <div className="shop-wrapper">
-                  <img onClick={shopEffect} className="white cart-img" src="/assets/svgs/cart.svg" alt="cart" />
+                  <div onClick={shopEffect} className="shop-wrapper">
+                  <img className="white cart-img" src="/assets/svgs/cart.svg" alt="cart" />
                   <div className="basket-size">
                     <div className="basket-size-wrapper">
                     {basketSize > 0 && <h5>{basketSize}</h5>}
