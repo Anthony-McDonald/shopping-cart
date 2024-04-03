@@ -5,7 +5,9 @@ import useApiData from "./useApi";
 import GeneratedEntry from "./GeneratedEntry";
 
 export default function SideGenerator({title, buttonEffect, addToBasket, filterCriteria, searchInput}) {
-    const [baseApiURL, setBaseApiURL] = useState('https://rawg.io/api/games?token&key=51e34b4a709042cea1f24c2bac77db00&page_size=40');
+    const pageSize = 32;
+    const API_Key = process.env.RAWG_API_KEY
+    const baseApiURL = 'https://rawg.io/api/games?token&key=' + API_KEY + '&page_size=' + pageSize;
     const [alterableApiURL, setAlterableApiURL] = useState(baseApiURL);
 
     useEffect(() => {
@@ -110,7 +112,7 @@ export default function SideGenerator({title, buttonEffect, addToBasket, filterC
             default:
                 break;
         }
-        currentApiURL + "&page_size=40"
+        console.log("api to print from is: " + currentApiURL)
         setAlterableApiURL(currentApiURL);
     }, [filterCriteria])
 
@@ -118,7 +120,7 @@ export default function SideGenerator({title, buttonEffect, addToBasket, filterC
         console.log("search input change detected")
         let currentApiURL = baseApiURL;
         currentApiURL += formatSearch(searchInput);
-        currentApiURL += "&page_size=40"
+        currentApiURL += "&page_size=" + pageSize
         currentApiURL += "&search=" + formatSearch(searchInput);
         console.log("api to print from is: " + currentApiURL)
         setAlterableApiURL(currentApiURL);
@@ -142,14 +144,14 @@ export default function SideGenerator({title, buttonEffect, addToBasket, filterC
     const data = useApiData(alterableApiURL);
     const [entries, setEntries] = useState(null);
     if (data != null) {
-        // Check if entries is null or if its length differs from data.results
+    
         if (entries === null || entries.length !== data.results.length) {
             setEntries(data.results);
         } else {
-            // Compare each element in the arrays
+
             const entriesChanged = entries.some((entry, index) => entry !== data.results[index]);
             
-            // If any element differs, update entries
+
             if (entriesChanged) {
                 setEntries(data.results);
             }
@@ -166,7 +168,7 @@ export default function SideGenerator({title, buttonEffect, addToBasket, filterC
                 <h1 className="gen-title">{title}</h1>
                 <div className="side-gen">
 
-                {entries && entries.length > 0 && (entries.filter(entry => entry.name !== "Content warning") // Filter out entries with name "Content warning"
+                {entries && entries.length > 0 && (entries.filter(entry => entry.name !== "Content Warning")
     .map((entry, index) => (
         <GeneratedEntry key={index} entryInfo={entry} index={index} addToBasket={addToBasket}></GeneratedEntry>
     ))
