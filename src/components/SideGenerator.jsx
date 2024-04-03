@@ -6,7 +6,7 @@ import GeneratedEntry from "./GeneratedEntry";
 
 export default function SideGenerator({title, buttonEffect, addToBasket, filterCriteria, searchInput}) {
     const pageSize = 32;
-    const API_Key = process.env.RAWG_API_KEY
+    const API_KEY = process.env.RAWG_API_KEY
     const baseApiURL = 'https://rawg.io/api/games?token&key=' + API_KEY + '&page_size=' + pageSize;
     const [alterableApiURL, setAlterableApiURL] = useState(baseApiURL);
 
