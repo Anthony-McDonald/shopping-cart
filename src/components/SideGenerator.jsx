@@ -175,7 +175,7 @@ export default function SideGenerator({title, buttonEffect, addToBasket, filterC
 
 
             <div className="hamburger-holder">
-            <img className="hamburger white"src="public/assets/svgs/hamburger.svg" alt="burger-menu" onClick={buttonEffect} />
+            <img className="hamburger white"src="/assets/svgs/hamburger.svg" alt="burger-menu" onClick={buttonEffect} />
             </div>
             
 
