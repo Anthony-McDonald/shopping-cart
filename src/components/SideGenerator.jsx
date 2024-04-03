@@ -8,6 +8,7 @@ export default function SideGenerator({title, buttonEffect, addToBasket, filterC
     const pageSize = 32;
     const API_KEY = process.env.RAWG_API_KEY
     console.log(API_KEY);
+    console.log(process.env + " | process env");
     const baseApiURL = 'https://rawg.io/api/games?token&key=' + API_KEY + '&page_size=' + pageSize;
     const [alterableApiURL, setAlterableApiURL] = useState(baseApiURL);
 
