@@ -15,4 +15,11 @@
     height: 100%;
 }
 
+button {
+  background-color: rgb(16, 33, 64);
+}
 
+
+h1, h2, h3, h4, h5 {
+  color: white;
+}
