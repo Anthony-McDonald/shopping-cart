@@ -1,12 +1,35 @@
-@media only screen and (max-width: 1000px) {
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 200px) {
+        .hype-text {
+            font-size: 4rem;
+        }
+        .open-text {
+            font-size: 5rem;;
+        }
+      }
+
+@media only screen and (min-width: 700px) {
     .hype-text {
-        font-size: 4.5rem !important;
+        font-size: 4.5rem ;
     }
 
     .open-text {
-        font-size: 7rem !important;
-        border: 1rem solid white !important;
-        margin-top: 2rem !important;
+        font-size: 7rem ;
+        border: 1rem solid white ;
+        margin-top: 2rem ;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .hype-text {
+        font-size: 7rem ;
+    }
+
+    .open-text {
+        font-size: 10rem ;
+        border: 1rem solid white ;
+        margin-top: 2rem ;
     }
 }
 
@@ -20,7 +43,6 @@
 }
 
 .hype-text {
-font-size: 8rem;
 text-align: center;
 margin: 1rem;
 color: white;
@@ -40,7 +62,6 @@ width: 20%;
 
 .open-text {
     margin-top: 4rem;
-    font-size: 10rem;
     border: 2rem solid white;
     padding-right: 1rem;
     padding-left: 1rem;
