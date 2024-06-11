@@ -1,6 +1,6 @@
 # Pixel Perfect #
 
-This is my rendition of a shopping cart application for video games. It is a strictly frontend application, making use of the RAWG Games API for all games shown on the frontend. As this API does not contain price information as all stores have different values, for the purposes of the demo project, all games have their price set to £9.99. 
+This is my rendition of a shopping cart application for video games. It is a strictly frontend application, making use of the RAWG Games API for all games shown on the frontend. As this API does not contain price information as all stores have different values, for the purposes of the demo project, all games have their price set to £9.99. If you are interested in seeing it for yourself, click [here](https://main--pixel-perfect-games.netlify.app/).
 
 ## Open ##
 ![](https://github.com/Anthony-McDonald/shopping-cart/assets/89093671/827af1d9-2caf-4fc6-afe9-d89d8fa41224)
